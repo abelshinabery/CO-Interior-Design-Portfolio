@@ -1,12 +1,23 @@
 
+// Toggle ham menu
+var toggleHamMenu = function() {
+    hamMenu.classList.toggle('change');
+    listNav.classList.toggle('show-nav');
+}
+
+
 // Navigation 
 var hamMenu = document.getElementById('ham-nav');
 var listNav = document.getElementById('list-nav');
+hamMenu.addEventListener('click', toggleHamMenu);
 
-hamMenu.addEventListener('click', function() {
-    hamMenu.classList.toggle('change');
-    listNav.classList.toggle('show-nav');
-});
+
+// Close nav when clicking on link on mobile
+var listLink = document.getElementsByClassName('list-nav-link');
+
+for (var i = 0; i < listLink.length; i++) {
+    listLink[i].addEventListener('click', toggleHamMenu);
+}
 
 // Image overlays
 
@@ -24,7 +35,6 @@ for (var i = 0; i < imgs.length; i++) {
 
 // Close overlay
 var closebar = document.getElementById('close-overlay');
-
 closebar.addEventListener('click', function() {
     overlay.classList.remove('show-overlay');
 });
