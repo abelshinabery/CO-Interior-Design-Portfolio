@@ -334,8 +334,34 @@ body {
     }
     
     /* Image overlay */
-    .show-overlay {
-        display: none !important;
+    
+    #overlay-img {
+        width: 70%;
+        margin: auto;
+    }
+    
+    .overlay {
+        display: flex;
+    }
+    
+    #overlay-img-title {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    #overlay-img-text {
+        font-size: 1.5em;
+    }
+    
+    #close-overlay {
+        position: relative;
+        top: 20%;
+        right: 15%;
+    }
+    
+    .bar-close {
+        width: 2em;
+        height: .1em;
     }
     
     /* About me */

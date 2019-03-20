@@ -33,8 +33,13 @@ for (var i = 0; i < imgs.length; i++) {
     });
 }
 
+
 // Close overlay
-var closebar = document.getElementById('close-overlay');
-closebar.addEventListener('click', function() {
+var closeOverlay = function() {
     overlay.classList.remove('show-overlay');
-});
+};
+
+var closebar = document.getElementById('close-overlay');
+closebar.addEventListener('click', closeOverlay);
+
+overlayImg.addEventListener('click', closeOverlay);
