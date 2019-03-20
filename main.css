@@ -45,6 +45,8 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -121,7 +123,7 @@ body {
     transition: 0.4s;
 }
 
-.change #bar1 {
+.change #bar1, #bar-close-1{
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
 }
@@ -130,18 +132,69 @@ body {
      opacity: 0;
 }
 
-.change #bar3 {
+.change #bar3, #bar-close-2 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
+
 /* Main images */
 
 
-.gal-img {
+.gal-img, #overlay-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+
+.img-overlay {
+        position: absolute;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+        display: none;
+    }
+
+.show-overlay {
+    display: flex !important;
+}
+
+#overlay-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .8);
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    display: none;
+}
+
+#overlay-img-title, #overlay-img-text {
+    color: white;
+    margin: 0 0 1em 0;
+}
+
+#overlay-img-title {
+    font-size: 3em;
+}
+
+#overlay-img-text {
+    font-size: 2.5em;
+}
+
+#close-overlay {
+    align-self: flex-end;
+}
+
+.bar-close {
+    background-color: white;
+    width: 4em;
+    height: .3em;
+    margin-bottom: 1em;
 }
 
 /* About */
@@ -150,8 +203,8 @@ body {
     text-align: center;
     font-family: 'Playfair Display SC', serif;
     font-size: 4em;
-    border-bottom: ;
     margin: 3em auto 1.5em;
+    display: inline-block;
 }
 
 #about-img, .about-txt {
@@ -161,6 +214,7 @@ body {
 #about-img {
     max-width: 100%;
     margin: 0 auto 4em;
+    display: block;
 }
 
 .about-txt {
@@ -186,40 +240,7 @@ body {
     }
     
     
-    
-    /* Images */
-    
-    #imgs {
-        display: grid;
-        margin: 0 auto;
-        grid-template-rows: 30em repeat(3, 15em) 30em repeat(2, 15em);
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 80%;
-    }
-    
-    .gal-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .gal-item {
-        position: relative;
-    }
-    
-    .gal-items-1, .gal-items-11 {
-        grid-column-start:  1;
-        grid-column-end: 4; 
-    }
-    
-    .img-overlay {
-        position: absolute;
-        bottom: 0;
-        height: 0;
-        width: 100%;
-        display: none;
-        transition: height 3s;
-    }
+
     
 /*
     .gal-item:hover .img-overlay {
@@ -274,5 +295,73 @@ body {
     
     .show-nav {
         display: none;
+    }
+    
+     /* Images */
+    
+    #imgs {
+        display: grid;
+        margin: 0 auto;
+        grid-template-rows: 30em repeat(3, 15em) 30em repeat(2, 15em);
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80%;
+    }
+    
+    .gal-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .gal-item {
+        position: relative;
+    }
+    
+    .gal-items-1, .gal-items-11 {
+        grid-column-start:  1;
+        grid-column-end: 4; 
+    }
+    
+    /* Image overlay */
+    .show-overlay {
+        display: none !important;
+    }
+    
+    /* About me */
+    
+    #about-me {
+        flex-direction: row;
+        width: 70%;
+        margin: auto;
+        align-items: flex-start;
+    }
+    
+
+    #about-me h3 {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 2.5em;
+        margin: 0 auto 1.5em;
+        display: inline-block;
+    }
+
+    #about-me > * {
+        flex: 1 0 50%;
+    }
+    
+    #about-me div:first-child {
+        flex: 0 1 100% !important;
+        text-align: center;
+    }
+
+    #about-img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto 4em;
+    }
+
+    .about-txt {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+        line-height: 1.5;
     }
 }
