@@ -1,4 +1,3 @@
-
 // Toggle ham menu
 var toggleHamMenu = function() {
     hamMenu.classList.toggle('change');
@@ -32,6 +31,13 @@ for (var i = 0; i < imgs.length; i++) {
         overlay.classList.add('show-overlay');
     });
 }
+
+// Image lazy load
+
+for (var i = 0; i < imgs.length; i++) {
+    imgs[i].classList.remove('wait-to-load');
+}
+
 
 
 // Close overlay

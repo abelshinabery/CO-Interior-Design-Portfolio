@@ -162,6 +162,11 @@ h3 {
     object-fit: cover;
 }
 
+.gal-img {
+    opacity: 1;
+    transition: 1s;
+}
+
 .show-overlay {
     display: flex !important;
 }
@@ -177,6 +182,10 @@ h3 {
     width: 100vw;
     z-index: 2;
     display: none;
+}
+
+.wait-to-load {
+    opacity: 0;
 }
 
 #overlay-img-title, #overlay-img-text {
