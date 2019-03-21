@@ -34,8 +34,15 @@ for (var i = 0; i < imgs.length; i++) {
 
 // Image lazy load
 
-for (var i = 0; i < imgs.length; i++) {
-    imgs[i].classList.remove('wait-to-load');
+var waitToLoad = document.querySelectorAll('img[data-src]');
+
+for (var i = 0; i < waitToLoad.length; i++) {
+    
+    waitToLoad[i].setAttribute('src', waitToLoad[i].getAttribute('data-src'));
+    
+    waitToLoad[i].onload = function() {
+        this.removeAttribute('data-src');
+    }
 }
 
 

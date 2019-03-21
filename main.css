@@ -184,7 +184,7 @@ h3 {
     display: none;
 }
 
-.wait-to-load {
+img[data-src] {
     opacity: 0;
 }
 
