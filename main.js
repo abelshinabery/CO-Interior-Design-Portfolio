@@ -22,15 +22,33 @@ for (var i = 0; i < listLink.length; i++) {
 
 var overlay = document.getElementById('overlay-container');
 var overlayImg = document.getElementById('overlay-img');
+var galItems = document.getElementsByClassName('gal-item');
 var imgs = document.getElementsByClassName('gal-img');
 console.log(imgs);
+var title, description;
 
 for (var i = 0; i < imgs.length; i++) {
+    
+    
     imgs[i].addEventListener('click', function() {
         overlayImg.src = this.src;
         overlay.classList.add('show-overlay');
+        
+        title = this.nextElementSibling.firstElementChild.textContent;
+        description = this.nextElementSibling.lastElementChild.textContent;
+                
+        document.getElementById('overlay-img-title').innerHTML = title;
+        document.getElementById('overlay-img-text').innerHTML = description;
     });
+    
 }
+
+
+for (var i = 0; i < galItems.length; i++) {
+  
+}
+
+
 
 // Image lazy load
 
@@ -50,9 +68,11 @@ for (var i = 0; i < waitToLoad.length; i++) {
 // Close overlay
 var closeOverlay = function() {
     overlay.classList.remove('show-overlay');
+    document.getElementById('overlay-img-title').innerHTML = " ";
+    document.getElementById('overlay-img-text').innerHTML = " ";
 };
 
 var closebar = document.getElementById('close-overlay');
-closebar.addEventListener('click', closeOverlay);
+overlay.addEventListener('click', closeOverlay);
 
 overlayImg.addEventListener('click', closeOverlay);

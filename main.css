@@ -19,10 +19,6 @@ a {
     cursor: pointer;
 }
 
-h3 {
-    text-transform: lowercase;
-}
-
 #main-grid {
     display: grid;
     height: 100vh;
@@ -194,22 +190,15 @@ img[data-src] {
 }
 
 #overlay-img-title {
-    font-size: 3em;
+    font-size: 6em;
+    border: none;
 }
 
 #overlay-img-text {
     font-size: 2.5em;
-}
-
-#close-overlay {
-    align-self: flex-end;
-}
-
-.bar-close {
-    background-color: white;
-    width: 4em;
-    height: .3em;
-    margin-bottom: 1em;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 1em;
+    text-align: center;
 }
 
 .img-overlay:hover {
@@ -254,6 +243,10 @@ img[data-src] {
     font-size: 3em;
     line-height: 1.5;
     margin: 0 auto 1em;
+}
+
+.contact-about {
+    font-weight: 700;
 }
 
 
@@ -371,29 +364,24 @@ img[data-src] {
         margin: auto;
     }
     
+    #overlay-img:hover {
+        cursor: pointer;
+    }
+    
     .overlay {
         display: flex;
     }
     
     #overlay-img-title {
         font-size: 3em;
-        margin: 0;
+        margin-top: 1.5em;
+        margin-bottom: 0;
     }
 
     #overlay-img-text {
-        font-size: 1.5em;
+        font-size: 1em;
     }
     
-    #close-overlay {
-        position: relative;
-        top: 20%;
-        right: 15%;
-    }
-    
-    .bar-close {
-        width: 2em;
-        height: .1em;
-    }
     
     .gal-item:hover > .img-overlay {
         background-color: rgba(0, 0, 0, .7);
@@ -426,7 +414,7 @@ img[data-src] {
     
     .img-overlay p {
         font-family: 'Roboto', sans-serif;
-        font-size: .8em;
+        font-size: .65em;
         color: #ccc;
     }
 
