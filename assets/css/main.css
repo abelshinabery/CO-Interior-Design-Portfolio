@@ -210,6 +210,9 @@ img[data-src] {
         bottom: 0;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         width: 100%;
         height: 0;
         transition: .4s;
@@ -217,6 +220,12 @@ img[data-src] {
         opacity: 0;
         overflow: hidden;
     }
+
+ .img-overlay h3, #overlay-img-title {
+   font-family: 'Playfair Display SC', serif;
+   text-transform: lowercase;
+   text-align: center;
+ }
 
 /* About */
 
@@ -249,6 +258,13 @@ img[data-src] {
     font-weight: 700;
 }
 
+#overlay-img-title {
+  margin-bottom: 0;
+}
+
+.overlay {
+  max-height: 50%;
+}
 
 
 
@@ -370,10 +386,13 @@ img[data-src] {
 
     .overlay {
         display: flex;
+        max-height: 50%;
     }
 
     #overlay-img-title {
         font-size: 3em;
+        text-transform: lowercase;
+        font-family: 'Playfair Display SC';
         margin-top: 1.5em;
         margin-bottom: 0;
     }
@@ -387,7 +406,7 @@ img[data-src] {
         background-color: rgba(0, 0, 0, .7);
         visibility: visible;
         bottom: 0;
-        height: 5em;
+        height: 7em;
         opacity: 1;
     }
 
@@ -397,25 +416,23 @@ img[data-src] {
     }
 
     .img-overlay h3, .img-overlay p {
-        margin: 0 0 0 1rem;
+        /* margin: 0 0 0 1rem */
     }
 
     .img-overlay h3 {
-        font-family: 'Playfair Display', serif;
-        margin-bottom: .5em;
-        padding-top: 1em;
-        align-self: flex-start;
         color: white;
         font-size: 1em;
         font-weight: 400;
         border-bottom: 1px solid #AE8447;
-        text-transform: none;
     }
 
     .img-overlay p {
         font-family: 'Roboto', sans-serif;
-        font-size: .65em;
+        font-size: .75em;
+        width: 90%;
+        text-align: center;
         color: #ccc;
+        margin-top: 0;
     }
 
 
