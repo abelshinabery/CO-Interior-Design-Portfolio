@@ -1,0 +1,9 @@
+{% for img in site.data.gallery %}
+  <figure class="gal-item gal-items-{{ forloop.index }}">
+      <img data-src="{{ site.assets_img_url }}{{ img.src }}" class="gal-img wait-to-load">
+      <div class="img-overlay">
+          <h3>{{ img.title }}</h3>
+          <p>{{ img.info }}</p>
+      </div>
+  </figure>
+{% endfor %}
