@@ -1,5 +1,4 @@
-- path: assets/css/
-- name: main
-  link: assets/css/main.css
 - name: normalize
-  link: assets/css/normalize.css
+  link: normalize.css
+- name: main
+  link: main.css

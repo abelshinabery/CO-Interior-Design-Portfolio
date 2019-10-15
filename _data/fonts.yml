@@ -1,0 +1,8 @@
+- name: Playfair+Display+SC
+  weights:
+- name: Playfair+Display
+  weights: "400,700"
+- name: Roboto
+  weights: "300,400"
+- name: Roboto+Condensed
+  weights: "400,700"
