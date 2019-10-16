@@ -8,5 +8,5 @@
   {% endfor %}
 
   <link href="https://fonts.googleapis.com/css?family={% for font in site.data.fonts %}{{ font.name | append: ':'}}{{ font.weights | append: '|' }}{% endfor %}" rel="stylesheet">
-
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </head>
