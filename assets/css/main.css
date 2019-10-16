@@ -80,8 +80,8 @@ a {
 }
 
 .logo h1 {
-    font-family: 'Playfair Display', serif; 
-  
+    font-family: 'Playfair Display', serif;
+
     font-size: 4em;
 }
 
@@ -92,7 +92,7 @@ a {
 }
 
 #logo-link {
-    
+
 }
 
 /* Nav */
@@ -210,6 +210,9 @@ img[data-src] {
         bottom: 0;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         width: 100%;
         height: 0;
         transition: .4s;
@@ -217,6 +220,12 @@ img[data-src] {
         opacity: 0;
         overflow: hidden;
     }
+
+ .img-overlay h3, #overlay-img-title {
+   font-family: 'Playfair Display SC', serif;
+   text-transform: lowercase;
+   text-align: center;
+ }
 
 /* About */
 
@@ -249,6 +258,13 @@ img[data-src] {
     font-weight: 700;
 }
 
+#overlay-img-title {
+  margin-bottom: 0;
+}
+
+.overlay {
+  max-height: 50%;
+}
 
 
 
@@ -256,50 +272,50 @@ img[data-src] {
 
 
 @media (min-width: 1000px) {
-    
-    
-    
+
+
+
     /* Grid setup */
     #main-grid {
         grid-template-rows: 4em 1fr 1fr;
     }
-    
+
     h3 {
         border-bottom: 2px solid #AE8447;
     }
 
-    
+
     /*  Header  */
-    
+
     #header {
 /*        box-shadow: 0px 1px 6px #333;*/
     }
-    
+
     #head-wrap {
-        justify-content: space-between;     
+        justify-content: space-between;
     }
-    
+
     .logo {
-        margin-bottom: 1em;  
+        margin-bottom: 1em;
         margin-left: 4em;
     }
-    
+
     .logo h1 {
         font-size: 2em;
         border-bottom: 1px solid #AE8447;
     }
-    
+
     .logo h2 {
         font-size: .8em
     }
-    
-    
+
+
     /* Nav */
-    
+
     .hamburger {
         display: none;
     }
-    
+
     #desktop-nav {
         display: flex;
         list-style: none;
@@ -307,12 +323,12 @@ img[data-src] {
         font-size: 1.2em;
         margin-right: 4em
     }
-    
+
     #desktop-nav li {
         margin-right: 0 auto;
         font-size: .8em;
     }
-    
+
     #desktop-nav a {
         margin-right: 3em;
         color: black;
@@ -320,19 +336,19 @@ img[data-src] {
         padding: .5em .7em;
         transition: .05s;
     }
-    
+
     #desktop-nav a:hover {
         background-color: #AE8447;
         color: white;
         border-radius: 5px;
     }
-    
+
     .show-nav {
         display: none;
     }
-    
+
      /* Images */
-    
+
     #imgs {
         display: grid;
         margin: 0 auto;
@@ -340,40 +356,43 @@ img[data-src] {
         grid-template-columns: 1fr 1fr 1fr;
         width: 80%;
     }
-    
+
     .gal-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    
+
     .gal-item {
         position: relative;
         cursor: pointer;
     }
-    
+
     .gal-items-1, .gal-items-11 {
         grid-column-start:  1;
-        grid-column-end: 4; 
+        grid-column-end: 4;
     }
-    
+
     /* Image overlay */
-    
+
     #overlay-img {
         width: 70%;
         margin: auto;
     }
-    
+
     #overlay-img:hover {
         cursor: pointer;
     }
-    
+
     .overlay {
         display: flex;
+        max-height: 50%;
     }
-    
+
     #overlay-img-title {
         font-size: 3em;
+        text-transform: lowercase;
+        font-family: 'Playfair Display SC';
         margin-top: 1.5em;
         margin-bottom: 0;
     }
@@ -381,53 +400,51 @@ img[data-src] {
     #overlay-img-text {
         font-size: 1em;
     }
-    
-    
+
+
     .gal-item:hover > .img-overlay {
         background-color: rgba(0, 0, 0, .7);
         visibility: visible;
         bottom: 0;
-        height: 5em;
+        height: 7em;
         opacity: 1;
     }
 
-    
+
     .img-overlay:hover {
         cursor: default;
     }
-    
+
     .img-overlay h3, .img-overlay p {
-        margin: 0 0 0 1rem;
+        /* margin: 0 0 0 1rem */
     }
-    
+
     .img-overlay h3 {
-        font-family: 'Playfair Display', serif;
-        margin-bottom: .5em;
-        padding-top: 1em;
-        align-self: flex-start;
         color: white;
         font-size: 1em;
         font-weight: 400;
         border-bottom: 1px solid #AE8447;
-        text-transform: none;
-    }
-    
-    .img-overlay p {
-        font-family: 'Roboto', sans-serif;
-        font-size: .65em;
-        color: #ccc;
     }
 
-    
+    .img-overlay p {
+        font-family: 'Roboto', sans-serif;
+        font-size: .75em;
+        width: 90%;
+        text-align: center;
+        color: #ccc;
+        margin-top: 0;
+    }
+
+
     /* About me */
-    
+
     #about-me {
         flex-direction: row;
         width: 70%;
         margin: auto;
         align-items: flex-start;
     }
-    
+
 
     #about-me h3 {
         font-family: 'Playfair Display SC', serif;
@@ -439,7 +456,7 @@ img[data-src] {
     #about-me > * {
         flex: 1 0 50%;
     }
-    
+
     #about-me div:first-child {
         flex: 0 1 100% !important;
         text-align: center;

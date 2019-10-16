@@ -1,0 +1,12 @@
+<head>
+
+  <title>{{ page.title }}</title>
+  <meta charset="utf-8">
+
+  {% for file in site.data.css %}
+    <link rel="stylesheet" type="text/css" href="{{ site.assets_css_url }}{{ file.link }}">
+  {% endfor %}
+
+  <link href="https://fonts.googleapis.com/css?family={% for font in site.data.fonts %}{{ font.name | append: ':'}}{{ font.weights | append: '|' }}{% endfor %}" rel="stylesheet">
+
+</head>

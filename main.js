@@ -5,7 +5,7 @@ var toggleHamMenu = function() {
 }
 
 
-// Navigation 
+// Navigation
 var hamMenu = document.getElementById('ham-nav');
 var listNav = document.getElementById('list-nav');
 hamMenu.addEventListener('click', toggleHamMenu);
@@ -28,24 +28,24 @@ console.log(imgs);
 var title, description;
 
 for (var i = 0; i < imgs.length; i++) {
-    
-    
+
+
     imgs[i].addEventListener('click', function() {
         overlayImg.src = this.src;
         overlay.classList.add('show-overlay');
-        
+
         title = this.nextElementSibling.firstElementChild.textContent;
         description = this.nextElementSibling.lastElementChild.textContent;
-                
+
         document.getElementById('overlay-img-title').innerHTML = title;
         document.getElementById('overlay-img-text').innerHTML = description;
     });
-    
+
 }
 
 
 for (var i = 0; i < galItems.length; i++) {
-  
+
 }
 
 
@@ -55,9 +55,9 @@ for (var i = 0; i < galItems.length; i++) {
 var waitToLoad = document.querySelectorAll('img[data-src]');
 
 for (var i = 0; i < waitToLoad.length; i++) {
-    
+
     waitToLoad[i].setAttribute('src', waitToLoad[i].getAttribute('data-src'));
-    
+
     waitToLoad[i].onload = function() {
         this.removeAttribute('data-src');
     }
