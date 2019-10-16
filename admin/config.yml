@@ -3,10 +3,12 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+  repo:
 media_folder: 'assets/uploads'
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
-    fields:
-      - { name: Title }
+  - name: 'image-gallery-setting'
+    label: 'Image Gallery settings'
+    files:
+      - label: "Image gallery settings"
+        name: "gallery"
+        file: "_data/gallery.yml"
